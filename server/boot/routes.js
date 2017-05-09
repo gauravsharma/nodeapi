@@ -9,7 +9,6 @@ var googleSearch = new GoogleSearch({
 module.exports = function (app) {
   var router = app.loopback.Router();
   router.get('/search', function (req, res) {
-    console.log(req.query.search);
     googleSearch.build({
       q: req.query.search,
       start: 5,

@@ -18,6 +18,10 @@ app.start = function() {
   });
 };
 
+app.get('/users/get', function (req, res) {
+  res.send('hello world');
+});
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
